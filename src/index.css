@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Bảng màu lấy theo cổng thông tin sinh viên FTU */
+@theme {
+  --color-ftu: #b01820;
+  --color-ftu-dark: #8f1118;
+  --color-ftu-soft: #f6dcdf;
+  --font-sans: Roboto, "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  @apply bg-slate-100 text-slate-800 antialiased;
+}
