@@ -9,6 +9,7 @@ import { useDeleteEvent } from '../hooks/useDeleteEvent'
 import { useAuth } from '../hooks/useAuth'
 import { PlusIcon } from '../components/Icons'
 import { buttonClasses } from '../utils/ui'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function EventListPage() {
   const [searchInput, setSearchInput] = useState('')
@@ -26,7 +27,7 @@ export default function EventListPage() {
     <>
       {/* Banner phủ kín chiều ngang khung nội dung */}
       <img
-        src="/images/ftu-banner-main.jpg"
+        src={assetUrl('/images/ftu-banner-main.jpg')}
         alt="Banner Trường Đại học Ngoại thương"
         className="w-full rounded-xl object-cover shadow-md"
       />

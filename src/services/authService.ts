@@ -7,7 +7,7 @@ const SALT = 'ftu-club-events'
 
 /**
  * Băm mật khẩu bằng SHA-256 (trình duyệt) trước khi so sánh/lưu.
- * Lưu ý: đây chỉ là mức bảo vệ cho bản demo dùng json-server; một hệ thống thật
+ * Lưu ý: đây chỉ là mức bảo vệ cho bản demo chạy hoàn toàn ở trình duyệt; một hệ thống thật
  * phải xác thực ở máy chủ với thuật toán băm chậm (bcrypt/argon2) và token/phiên.
  */
 async function hashPassword(username: string, password: string): Promise<string> {

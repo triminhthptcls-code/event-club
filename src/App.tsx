@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import AuthProvider from './auth/AuthProvider'
 import RequireRole from './auth/RequireRole'
 import ToastProvider from './components/toast/ToastProvider'
@@ -17,7 +17,7 @@ import RegisterPage from './pages/RegisterPage'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ToastProvider>
         <AuthProvider>
         <Routes>
@@ -59,6 +59,6 @@ export default function App() {
         </Routes>
         </AuthProvider>
       </ToastProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }

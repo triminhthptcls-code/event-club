@@ -26,7 +26,7 @@ async function withSeats(events: ClubEvent[]): Promise<EventWithSeats[]> {
  * - upcoming: date >= hôm nay, sắp xếp tăng dần (sự kiện gần nhất lên đầu)
  * - past: date < hôm nay, sắp xếp giảm dần (sự kiện mới diễn ra lên đầu)
  *
- * json-server 1.0.0-beta.3 chỉ lọc bằng "=" và không có contains / so sánh ngày
+ * Dữ liệu giả chỉ lọc bằng "=" (giống json-server), không có contains / so sánh ngày
  * dạng chuỗi / lọc nhiều CLB, nên API chỉ lọc theo CLB (club=<id>, một lần gọi cho
  * mỗi CLB đã chọn); phần còn lại được lọc, sắp xếp và phân trang ở client.
  */

@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { getClub } from '../data/clubs'
 import { useAuth } from '../hooks/useAuth'
 import { getNavItems } from './navItems'
+import { assetUrl } from '../utils/assetUrl'
 
 const BASE_PILL =
   'inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-xs font-semibold transition'
@@ -21,7 +22,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 py-2.5">
         <Link to="/su-kien" className="flex items-center gap-2 text-white">
           <img
-            src="/images/ftu-logo.png"
+            src={assetUrl('/images/ftu-logo.png')}
             alt="Logo Đại học Ngoại thương"
             className="h-10 w-10 rounded-full bg-white"
           />

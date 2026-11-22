@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { getClub, getGroupColor } from '../data/clubs'
+import { assetUrl } from '../utils/assetUrl'
 
 interface ClubIconProps {
   clubId: string
@@ -30,7 +31,7 @@ export default function ClubIcon({ clubId, size = 40 }: ClubIconProps) {
   if (!failed) {
     return (
       <img
-        src={club.logo ?? `/images/clubs/${club.id}.png`}
+        src={assetUrl(club.logo ?? `/images/clubs/${club.id}.png`)}
         alt=""
         style={style}
         className="shrink-0 rounded-full bg-white object-contain ring-1 ring-slate-200"

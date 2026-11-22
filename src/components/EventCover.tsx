@@ -3,6 +3,7 @@ import type { ClubEvent } from '../types/event'
 import ClubIcon from './ClubIcon'
 import { DEFAULT_EVENT_IMAGES } from '../utils/eventImages'
 import { MapPinIcon, VideoIcon } from './Icons'
+import { assetUrl } from '../utils/assetUrl'
 
 /** Gradient dự phòng khi chưa có ảnh, chọn theo id để các thẻ không giống hệt nhau */
 const GRADIENTS = [
@@ -59,7 +60,7 @@ export default function EventCover({ event, className = 'h-40' }: EventCoverProp
       )}
       {!failed && (
         <img
-          src={candidates[tried]}
+          src={assetUrl(candidates[tried])}
           alt={event.name}
           loading="lazy"
           onError={() => setTried((value) => value + 1)}

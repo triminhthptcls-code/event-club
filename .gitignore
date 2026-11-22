@@ -3,3 +3,9 @@ dist
 *.local
 .DS_Store
 *.tsbuildinfo
+
+# File thừa, không đưa lên git
+public/images/**/*.htm
+public/images/events/dsc*.jpg
+public/images/events/dscf*.jpg
+public/images/events/566214*.jpg

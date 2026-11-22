@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import type { ChangeEvent } from 'react'
 import { fileToCompressedDataUrl } from '../utils/image'
 import { buttonClasses } from '../utils/ui'
+import { assetUrl } from '../utils/assetUrl'
 
 interface ImageFieldProps {
   value: string
@@ -58,7 +59,7 @@ export default function ImageField({
             </p>
           ) : (
             <img
-              src={value}
+              src={assetUrl(value)}
               alt="Xem trước ảnh bìa"
               onError={() => setFailedSrc(value)}
               className="h-48 w-full object-cover"
